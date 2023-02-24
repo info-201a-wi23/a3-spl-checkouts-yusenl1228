@@ -23,10 +23,20 @@ Feel free to calculate and report values that you find relevant.
 ### The Dataset
 
 - Who collected/published the data?  
+  The Seattle Public Library
+  
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, PublicationYear
+
 - How was the data collected or generated?  
+This dataset includes a monthly count of Seattle Public Library checkouts by title for physical and electronic items. The dataset begins with checkouts that occurred in April 2005.
+
 - Why was the data collected?  
+The data was collected and is still being collected by the library mainly to keep track of the books being checked out since they are merchandises/properties of the library. Doing so can avoid losses to the library and help with further data visualizations.
+
 - What, if any, ethical questions do you need to consider when working with this data?  
+The only ethical question needed to be considered that I could think about is the when applying such data to form data visualization to earn profits, we should earn approval from the publisher which is the library itself. But since this is a homework assignment, we shouldn't worry too much about it.
+
 - What are possible limitations or problems with this data?   (at least 200 words)
 
 
