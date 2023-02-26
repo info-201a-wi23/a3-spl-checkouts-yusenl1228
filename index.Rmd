@@ -14,6 +14,7 @@ By looking at these specified data, I would be able to see people live in Seattl
 ### Summary Information
 
 From this data, I aim to see the differences and influences caused by the COVID pandemic. To do so, I compare the two most significant material types, BOOK and EBOOK and see the changes in their checkout amounts from 2017 to 2022. The visualization shows that the BOOK type's checkout amount had a significant drop in 2020 while the EBOOK was not influenced greatly. For the top book publishers (or any kind of medias besides books), the publisher with the most checkout amounts shows a downward trend at 2020 while the 2nd and 3rd most popular publishers stayed increasing checkout amounts. And for the most popular book based on the checkout amount, it had a downward trend looking at its checkout amount based on date. Though wanted to say these interpretations are valid and useful, I cannot do so. Because the data is too limited by its source. A checkout record from one public library is far from enough to make conclusion about people's interest and social issue influences. Yet, it still shows that there was a significant influence happening (but possibly not only here) at this area when the pandemic hits.
+The variables being used are the total checkouts grouped by Publisher, the total checkouts grouped by material types, the total checkouts filtered by material names, the taotal checkouts filtered by the publisher names, the total checkouts of the most popular book filtered by date, etc.
 
 ### The Dataset
 
