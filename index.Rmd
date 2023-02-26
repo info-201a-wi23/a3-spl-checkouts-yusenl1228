@@ -5,25 +5,20 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+The data set I'm using is the book checkout records for at least 10 times from the Seattle Public Library from 2017 to 2022. The data includes 816354 observations and 12 variables/columns describing each checkout record.
+In this data set, I aim to find out the most popular book categories. By drawing a line plot over the years, we could see the trend of the checkouts of the two most popular Material Types.
+Then I want to specify by looking at the publishers who published the most products over the years. And to see whether there are some ups and downs for each of them.
+Then I'll find the book that has been checked out the most and finally I want to see if this book's checkout record would be influenced by the COVID pandemic along with the categories. 
+By looking at these specified data, I would be able to see people live in Seattle area's reading interests and how would social issues influence people's reading habits.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+From this data, I aim to see the differences and influences caused by the COVID pandemic. To do so, I compare the two most significant material types, BOOK and EBOOK and see the changes in their checkout amounts from 2017 to 2022. The visualization shows that the BOOK type's checkout amount had a significant drop in 2020 while the EBOOK was not influenced greatly. For the top book publishers (or any kind of medias besides books), the publisher with the most checkout amounts shows a downward trend at 2020 while the 2nd and 3rd most popular publishers stayed increasing checkout amounts. And for the most popular book based on the checkout amount, it had a downward trend looking at its checkout amount based on date. Though wanted to say these interpretations are valid and useful, I cannot do so. Because the data is too limited by its source. A checkout record from one public library is far from enough to make conclusion about people's interest and social issue influences. Yet, it still shows that there was a significant influence happening (but possibly not only here) at this area when the pandemic hits.
 
 ### The Dataset
 
 - Who collected/published the data?  
-  The Seattle Public Library
+The Seattle Public Library
   
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
 UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, PublicationYear
@@ -38,59 +33,33 @@ The data was collected and is still being collected by the library mainly to kee
 The only ethical question needed to be considered that I could think about is the when applying such data to form data visualization to earn profits, we should earn approval from the publisher which is the library itself. But since this is a homework assignment, we shouldn't worry too much about it.
 
 - What are possible limitations or problems with this data?   (at least 200 words)
+The time range is limited since the record started by 2005 (and for the dataset that I'm using it started from 2017, even a bit more limited). There might be books that are popular overtime but were published before the data started to be recorded. Therefore the popularity cannot be visualized thoroughly since the book might have been a very popular book before 2005 but did not stay as popular after the data started to be recorded.
+Another limitation might be the biases caused by the location that the data is being collected. This data only contains the checkcout records from the Seattle Public Library. People/readers' interests are very limited. Due to various reasons such as political issues and social controversial topics, books' popularity among regions/countries could vary greatly. We should be very careful when deciding what research questions we are investigating since the data is limited.
+In this data set, the dates of the checkout records are not very cleared, they are only rounded to the months but not dates. Even not being a very significant issue, this should still be considered when working with the research questions.
 
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+Before creating the chart, I narrow the data down by excluding data from 2023 since there are not a lot of data recorded for 2023, and this might influence our analysis. This line plot shows the total number of checkouts of the two most checked out book materials, book and ebook, and the trend from 2017 to 2022. I meant to see if there's a big downfall of book checkouts when the COVID pandemic hits. And the plot does show a big downfall for book at 2020, which proves my expectation. And because of the accessibility of ebooks, there's not really a big downfall for ebooks according to the plot.
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
 
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, warning = FALSE, code = readLines("Chart1.R")}
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+Before creating the chart, I narrow the data down by excluding data from 2023 since there are not a lot of data recorded for 2023, and this might influence our analysis. This line plot shows the total checkout trends for the top_3 book publishers. It's curious to see that the publisher that has the most items checked out in total actually has a relatively larger downfall comparing to the other two publishers when the COVID pandemic hits. The blue line had a very sudden trun at its peak at 2020, while the other two stayed stable and even have an increasing trend.
 
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
 
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, code = readLines("Chart2.R")}
 ```
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
+Before creating the chart, I narrow the data down by excluding data from 2023 since there are not a lot of data recorded for 2023, and this might influence our analysis. This line plot shows the trend of the most checked out book at Seattle Public Library. I narrowed the data down by filtering it to "BOOK" only then grouped the data by date to create the line plot. By looking at the plot, this book "Educated : a memoir / Tara Westover." has a high checkout record but the record significantly dropped starting 2019, signifying the influences of COVID.
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
 
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, code = readLines("Chart3.R")}
 ```
 
 
